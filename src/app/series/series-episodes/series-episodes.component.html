@@ -1,0 +1,10 @@
+<kendo-grid [kendoGridBinding]="episodesData" [height]="410">
+    <kendo-grid-column field="Title"><ng-template kendoGridCellTemplate let-dataItem><a [routerLink]="" (click)="openDialog(dataItem.Episode)">{{ dataItem.Title }}</a></ng-template></kendo-grid-column>
+    <kendo-grid-column field="Released"></kendo-grid-column>
+    <kendo-grid-column field="Episode"></kendo-grid-column>
+    <kendo-grid-column field="imdbRating"></kendo-grid-column>
+</kendo-grid>
+
+
+
+

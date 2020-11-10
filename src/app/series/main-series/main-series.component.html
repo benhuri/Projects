@@ -1,0 +1,14 @@
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Please choose a series
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <div *ngFor="let seriesName of seriesNames" class="btn-group dropright">
+        <button type="button" class="dropbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{seriesName}}
+        <span class="caret"></span></button>
+        <div class="dropdown-content">
+            <a *ngFor="let seasonNum of seasons[seriesName]; let i = index" [routerLink]="[seriesName, seasonNum+1]">Season {{i+1}}</a>
+        </div>
+      </div>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>
